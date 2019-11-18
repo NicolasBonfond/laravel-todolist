@@ -2029,6 +2029,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('Component mounted.');
@@ -38383,11 +38384,11 @@ var staticRenderFns = [
     return _c("div", { staticClass: "row justify-content-center" }, [
       _c("div", { staticClass: "col-md-8" }, [
         _c("div", { staticClass: "card card-default" }, [
-          _c("div", { staticClass: "card-header" }, [_vm._v("Home Component")]),
+          _c("div", { staticClass: "card-header" }, [_vm._v("TodouxList")]),
           _vm._v(" "),
           _c("div", { staticClass: "card-body" }, [
             _vm._v(
-              "\n                I'm the Home Component component.\n            "
+              "\n                Welcome to the TodouxList ! \n                Please login or register now to acces to the service\n            "
             )
           ])
         ])
@@ -38468,7 +38469,21 @@ var render = function() {
               1
             ),
             _vm._v(" "),
-            _vm._m(1, true)
+            _c("td", [
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-danger",
+                  on: {
+                    click: function($event) {
+                      $event.preventDefault()
+                      return _vm.deletePost(post.id)
+                    }
+                  }
+                },
+                [_vm._v("Delete")]
+              )
+            ])
           ])
         }),
         0
@@ -38491,14 +38506,6 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("th", [_vm._v("Actions")])
       ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("td", [
-      _c("button", { staticClass: "btn btn-danger" }, [_vm._v("Delete")])
     ])
   }
 ]
