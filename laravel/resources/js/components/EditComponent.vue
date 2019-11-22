@@ -18,14 +18,15 @@
             <label>Post Body:</label>
             <textarea class="form-control" v-model="post.body" rows="5"></textarea>
           </div>
+          <div id="formtopost"></div>
         </div>
       </div>
       <br />
       <div class="form-group">
         <button class="btn btn-primary">Update</button>
-        <button id="add" class="btn btn-primary">ADD</button>
       </div>
     </form>
+    <button id="addbtn" class="btn btn-primary">ADD</button>
   </div>
 </template>
 

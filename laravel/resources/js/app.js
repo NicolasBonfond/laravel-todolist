@@ -47,3 +47,22 @@ const router = new VueRouter({
 const app = new Vue(Vue.util.extend({
     router
 }, App)).$mount('#app');
+
+document.getElementById('addbtn').addEventListener('click', () => {
+    /*     let taskinput = `<input type="text" name="fname"></input>`
+
+        let element = document.getElementById('formtopost');
+        element.appendChild() */
+
+
+    let input = document.createElement("input");
+    let checkbox = document.createElement("input");
+    input.setAttribute('type', 'text')
+    checkbox.setAttribute('type', 'checkbox')
+
+    let information = document.createTextNode("post.body");
+    input.appendChild(information);
+    let element = document.getElementById("formtopost");
+    element.appendChild(input);
+
+})

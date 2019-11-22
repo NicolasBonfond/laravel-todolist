@@ -1,9 +1,9 @@
-// CreateComponent.vue
+// TaskComponent.vue
 
 <template>
   <div>
-    <h1>Create A Post</h1>
-    <form @submit.prevent="addPost">
+    <h1>Task A Post</h1>
+    <div @submit.prevent="addPost">
       <div class="row">
         <div class="col-md-6">
           <div class="form-group">
@@ -22,9 +22,9 @@
       </div>
       <br />
       <div class="form-group">
-        <button class="btn btn-primary">Create</button>
+        <button class="btn btn-primary">Task</button>
       </div>
-    </form>
+    </div>
   </div>
 </template>
 
@@ -37,7 +37,7 @@ export default {
   },
   methods: {
     addPost() {
-      let uri = "http://localhost/api/post/create";
+      let uri = "http://localhost/api/post/Task";
       this.axios.post(uri, this.post).then(response => {
         this.$router.push({ name: "posts" });
       });

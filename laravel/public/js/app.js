@@ -1924,10 +1924,10 @@ __webpack_require__.r(__webpack_exports__);
     addPost: function addPost() {
       var _this = this;
 
-      var uri = 'http://localhost/api/post/create';
+      var uri = "http://localhost/api/post/create";
       this.axios.post(uri, this.post).then(function (response) {
         _this.$router.push({
-          name: 'posts'
+          name: "posts"
         });
       });
     }
@@ -1945,6 +1945,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
 //
 //
 //
@@ -38227,6 +38228,7 @@ var render = function() {
             ])
           ])
         ]),
+        _vm._v(" "),
         _c("br"),
         _vm._v(" "),
         _vm._m(0)
@@ -38335,7 +38337,9 @@ var render = function() {
                   }
                 }
               })
-            ])
+            ]),
+            _vm._v(" "),
+            _c("div", { attrs: { id: "formtopost" } })
           ])
         ]),
         _vm._v(" "),
@@ -38343,7 +38347,11 @@ var render = function() {
         _vm._v(" "),
         _vm._m(0)
       ]
-    )
+    ),
+    _vm._v(" "),
+    _c("button", { staticClass: "btn btn-primary", attrs: { id: "addbtn" } }, [
+      _vm._v("ADD")
+    ])
   ])
 }
 var staticRenderFns = [
@@ -38352,11 +38360,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "form-group" }, [
-      _c("button", { staticClass: "btn btn-primary" }, [_vm._v("Update")]),
-      _vm._v(" "),
-      _c("button", { staticClass: "btn btn-primary", attrs: { id: "add" } }, [
-        _vm._v("ADD")
-      ])
+      _c("button", { staticClass: "btn btn-primary" }, [_vm._v("Update")])
     ])
   }
 ]
@@ -53697,6 +53701,19 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_0__["default"]({
 var app = new Vue(Vue.util.extend({
   router: router
 }, _App_vue__WEBPACK_IMPORTED_MODULE_3__["default"])).$mount('#app');
+document.getElementById('addbtn').addEventListener('click', function () {
+  /*     let taskinput = `<input type="text" name="fname"></input>`
+       let element = document.getElementById('formtopost');
+      element.appendChild() */
+  var input = document.createElement("input");
+  var checkbox = document.createElement("input");
+  input.setAttribute('type', 'text');
+  checkbox.setAttribute('type', 'checkbox');
+  var information = document.createTextNode("post.body");
+  input.appendChild(information);
+  var element = document.getElementById("formtopost");
+  element.appendChild(input);
+});
 
 /***/ }),
 
